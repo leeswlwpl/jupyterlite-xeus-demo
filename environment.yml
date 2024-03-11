@@ -11,3 +11,4 @@ dependencies:
   - matplotlib
   - plotly
   - seaborn
+  - scikit-learn
