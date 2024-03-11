@@ -5,6 +5,5 @@ channels:
 dependencies:
   - xeus-python
   - ipycanvas
-  - jupyterlab_server
-  - libarchive
+  - pyodide
   - seaborn
