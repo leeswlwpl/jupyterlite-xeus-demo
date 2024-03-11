@@ -7,5 +7,4 @@ dependencies:
   - ipycanvas
   - libarchive
   - jupyterlab_server
-  - pyodide-http
   - seaborn
