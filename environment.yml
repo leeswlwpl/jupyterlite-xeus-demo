@@ -7,4 +7,3 @@ dependencies:
   - ipycanvas
   - pyodide_http
   - seaborn
-  -
