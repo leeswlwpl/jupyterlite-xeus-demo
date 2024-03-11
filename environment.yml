@@ -5,7 +5,6 @@ channels:
 dependencies:
   - xeus-python
   - ipycanvas
-#  Custom added packages
   - pyodide_http
   - seaborn
   -
