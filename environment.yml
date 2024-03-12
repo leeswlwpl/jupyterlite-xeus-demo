@@ -11,11 +11,11 @@ dependencies:
   - matplotlib
   - plotly
   - scikit-learn
+  - libarchive
+  - jupyterlab_server
 #  - pyodide-http
   - pip
   - pip:
-    - libarchive
-    - jupyterlab_server
     - pyodide-http
     - seaborn
 
