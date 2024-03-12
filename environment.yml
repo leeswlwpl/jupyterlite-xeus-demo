@@ -14,5 +14,8 @@ dependencies:
 #  - pyodide-http
   - pip
   - pip:
+    - libarchive
+    - jupyterlab_server
     - pyodide-http
     - seaborn
+
