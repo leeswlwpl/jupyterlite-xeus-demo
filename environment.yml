@@ -14,6 +14,5 @@ dependencies:
 #  - pyodide-http
   - pip
   - pip:
-    - pyodide
     - pyodide-http
     - seaborn
