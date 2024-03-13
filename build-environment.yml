@@ -9,4 +9,4 @@ dependencies:
   - jupyterlite-xeus>=0.1.2,<0.2
   - libarchive
   - jupyterlab_server
-  - jupyterlite-pyodide-kernel==0.2.3
+#  - jupyterlite-pyodide-kernel==0.2.3
