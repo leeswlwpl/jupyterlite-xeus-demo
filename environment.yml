@@ -10,10 +10,11 @@ dependencies:
   - pandas
   - matplotlib
   - plotly
+  - seaborn
   - scikit-learn
 #  - pyodide-http
   - pip
   - pip:
     - pyodide-http
-    - seaborn
+
 

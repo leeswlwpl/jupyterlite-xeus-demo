@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JupyterLite</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Description" content="WASM powered Jupyter running in the browser." />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link
+      id="jupyter-lite-main"
+      rel="preload"
+      href="../build/lab/bundle.js?_=429a974"
+      main="index"
+      as="script"
+    />
+    <script
+      id="jupyter-config-data"
+      type="application/json"
+      data-jupyter-lite-root=".."
+    >
+      {}
+    </script>
+    <script>
+      (async function () {
+        const { pathname, origin, search, hash } = window.location;
+        if (pathname.match(/(index.html|\/?)$/) == null) {
+          window.location.href = `${origin}${pathname}/${search}${hash}`;
+          return;
+        }
+        await import(
+          '../config-utils.js?_=429a974'
+        );
+      }.call(this));
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+  </head>
+  <body data-notebook="lab">
+
+<!--  <script>-->
+<!--    console.log("custom script1")-->
+
+<!--    import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';-->
+<!--    import { IRunningSession } from '@jupyterlab/services';-->
+
+<!--    // const extension: JupyterFrontEndPlugin<void> = {-->
+<!--    //   id: 'my-extension',-->
+<!--    //   autoStart: true,-->
+<!--    //   activate: (app: JupyterFrontEnd) => {-->
+<!--    //     app.serviceManager.sessions.runningChanged.connect((manager: IRunningSession.IManager) => {-->
+<!--    //       manager.runningChanged.connect((sessions: IRunningSession.IModel[]) => {-->
+<!--    //         console.log('Hello, this code will be executed before every kernel starts!');-->
+<!--    //         // Your code here-->
+<!--    //       });-->
+<!--    //     });-->
+<!--    //   }-->
+<!--    // };-->
+<!--  </script>-->
+
+<script type="text/javascript">
+  async function main(){
+    let pyodide = await loadPyodide();
+    console.log(pyodide.runPython("1 + 2"));
+    console.log(pyodide.runPython("r=1"));
+    console.log(pyodide.runPython("print(4)"));
+    console.log(pyodide.runPython("print(r)"));
+
+    // pyodide.runPython(`
+    //       import snowballstemmer
+    //       stemmer = snowballstemmer.stemmer('english')
+    //       print(stemmer.stemWords('go goes going gone'.split()))
+    //     `);
+  }
+  main();
+
+  async function installPackage(packageName) {
+    console.log(`Installing package '${packageName}'...`)
+    // Load the package
+    let pyodide = await loadPyodide();
+    await pyodide.loadPackage(packageName);
+    console.log(`Package '${packageName}' installed successfully!`);
+  }
+  installPackage('seaborn');
+
+</script>
+
+
+  </body>
+</html>

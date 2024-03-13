@@ -33,6 +33,10 @@ jobs:
           cp README.md content
           jupyter lite build --contents content --output-dir dist
 
+      - name: Copy and Replace index file in dist
+        run: |
+          cp index.html dist/lab/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
