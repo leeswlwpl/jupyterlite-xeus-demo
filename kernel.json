@@ -1,6 +1,6 @@
-{"display_name": "Python 3.11 (XPython)", 
-	"argv": ["xeus/bin/xpython.js", "-f", "{connection_file}", "-m", "00_pre_run.ipy"], 
-	"language": "python", "metadata": {"debugger": true}, 
-	"resources": {"logo-64x64": "xeus/kernels/xpython/logo-64x64.png", 
-	"logo-32x32": "xeus/kernels/xpython/logo-32x32.png", 
+{"display_name": "Python 3.11 (XPython)",
+	"argv": ["xeus/bin/xpython.js", "-f", "{connection_file}", "-m", "01_pre_run.py"],
+	"language": "python", "metadata": {"debugger": true},
+	"resources": {"logo-64x64": "xeus/kernels/xpython/logo-64x64.png",
+	"logo-32x32": "xeus/kernels/xpython/logo-32x32.png",
 "logo-svg": "xeus/kernels/xpython/logo-svg.svg"}}
