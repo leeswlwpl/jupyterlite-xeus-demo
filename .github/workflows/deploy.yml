@@ -41,6 +41,7 @@ jobs:
           cp 00_pre_run.ipy dist/xeus/kernels/xpython/00_pre_run.ipy
           cp 01_pre_run.py dist/xeus/kernels/xpython/01_pre_run.py
           cp pre_run.py dist/xeus/kernels/xpython/pre_run.py
+          cp kernel.json dist/xeus/kernels/xpython/kernel.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
