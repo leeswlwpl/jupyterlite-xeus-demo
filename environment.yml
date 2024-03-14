@@ -12,7 +12,11 @@ dependencies:
   - plotly
   - seaborn
   - scikit-learn
-#  - pyodide-http
+  - imageio
+  - requests
+  - selenium
+  - beautifulsoup4
+
   - pip
   - pip:
     - pyodide-http
