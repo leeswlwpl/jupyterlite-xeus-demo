@@ -14,7 +14,6 @@ dependencies:
   - scikit-learn
   - imageio
   - requests
-  - selenium
   - beautifulsoup4
 
   - pip
