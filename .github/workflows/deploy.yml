@@ -36,6 +36,12 @@ jobs:
 #        run: |
 #          cp index.html dist/lab/index.html
 
+      - name: Copy script file in dist
+        run: |
+          cp 00_pre_run.ipy dist/xeus/kernels/xpython/00_pre_run.ipy
+          cp 01_pre_run.py dist/xeus/kernels/xpython/01_pre_run.py
+          cp pre_run.py dist/xeus/kernels/xpython/pre_run.py
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
